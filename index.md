@@ -14,59 +14,8 @@ My GitHub page is https://github.com/JG-Fullerton.
 
 * Lab 10
 
-    Lab 10 was one of my favorite labs because it helped me practice using loops and organized problem solving. I liked seeing how small pieces of code could work together to create a complete program. I learned how to debug errors more carefully and improve my code step by step.
+    Lab 10 was one of my favorite labs because it helped me practice using loops and organized problem solving. I liked seeing how small pieces of code could become to create a complete program. I learned how to debug errors more carefully and improve my code step by step.
 
 * Lab 12
 
-    Lab 12 was one of my favorite labs because it gave me a chance to be more creative with programming. I liked that the final result could be shown visually on my portfolio page. I learned how programming can be used to create images and demonstrate my work online.
-
-## Mini Paint
-
-Use your mouse to draw in the box below.
-
-<canvas id="paintCanvas" width="600" height="400" style="border:2px solid black; background:white;"></canvas>
-
-<br>
-
-<button onclick="clearCanvas()">Clear</button>
-
-<script>
-const canvas = document.getElementById("paintCanvas");
-const ctx = canvas.getContext("2d");
-
-let painting = false;
-
-canvas.addEventListener("mousedown", startDraw);
-canvas.addEventListener("mouseup", stopDraw);
-canvas.addEventListener("mousemove", draw);
-canvas.addEventListener("mouseleave", stopDraw);
-
-function startDraw(event) {
-  painting = true;
-  draw(event);
-}
-
-function stopDraw() {
-  painting = false;
-  ctx.beginPath();
-}
-
-function draw(event) {
-  if (!painting) return;
-
-  const rect = canvas.getBoundingClientRect();
-
-  ctx.lineWidth = 4;
-  ctx.lineCap = "round";
-  ctx.strokeStyle = "black";
-
-  ctx.lineTo(event.clientX - rect.left, event.clientY - rect.top);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.moveTo(event.clientX - rect.left, event.clientY - rect.top);
-}
-
-function clearCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
-</script>
+    Lab 12 was one of my favorite labs because it gave me a chance to be more creative with programming. I liked that the final result could be shown visually on my portfolio page.
